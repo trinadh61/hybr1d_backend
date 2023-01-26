@@ -1,5 +1,4 @@
-const { where } = require('sequelize/lib/sequelize');
-const { sequelize } = require('../models');
+
 const db = require('../models');
 
 const router = require('express').Router();
@@ -84,13 +83,7 @@ router.post('/createorder/:sellerid', async (req, res, next) => {
 
     await db.order_product_mapping.bulkCreate(bulkCreateObject);
 
-    return res.status(200).json({data : {orderid : orderDetails.orderid}, message : "order created successfully"})
-
-    
-
-
-    
-   
+    return res.status(200).json({data : {orderid : orderDetails.orderid}, message : "order created successfully"}) 
         
     }
     catch(e){
