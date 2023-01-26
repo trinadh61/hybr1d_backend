@@ -17,8 +17,7 @@ fs.readdirSync(__dirname).filter( file => {
 
 
 
-db.product.belongsTo(db.catalog, {through :db.catalog_product_mapping, foreignKey:'productid', sourceKey : 'productid', otherKey : 'catalogid'})
-db.catalog.belongsToMany(db.product, {through: db.catalog_product_mapping,foreignKey:'catalogid',otherKey : 'productid'})
+db.catalog.belongsToMany(db.product, {through: db.catalog_product_mapping,foreignKey:'catalogid',otherKey : 'productid', sourceKey :'catalogid'})
 db.product.belongsToMany(db.orders, {through :db.order_product_mapping, foreignKey:'productid', sourceKey : 'productid', otherKey : 'orderid'})
 db.orders.belongsToMany(db.product, {through: db.order_product_mapping,foreignKey:'orderid',otherKey : 'productid', sourceKey : 'orderid'})
 db.orders.belongsTo(db.catalog, {foreignKey : "catalogid"})
