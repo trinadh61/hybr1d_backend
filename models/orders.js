@@ -12,7 +12,8 @@ const user = (sequelize, DataTypes) => {
         },
         productid: {
           type: DataTypes.INTEGER,
-          allowNull: false,
+          allowNull: true,
+          defaultValue : -1
         },
         catalogid: {
             type: DataTypes.INTEGER,
