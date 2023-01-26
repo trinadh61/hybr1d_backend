@@ -17,3 +17,6 @@ config.json format
 
 "auth_privatekey": some_random_key
 }
+
+
+npm run start

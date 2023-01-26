@@ -6,7 +6,7 @@ const seller_router = require('./routes/sellerroute')
 const body_parser = require('body-parser');
 const { authenication } = require('./auth');
 const app = express();
-const port =  8080;
+const port =  8086;
 
 
 app.listen(port, (error) => {
