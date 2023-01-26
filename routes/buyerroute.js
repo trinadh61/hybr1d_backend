@@ -5,7 +5,7 @@ const router = require('express').Router();
 
 router.get('/allsellers', async (req, res, next) => {
     try {
-        const users = await db.users.findAll({
+        const users = await db.user.findAll({
             where: {
                 usertype : 'sellers',
             },
